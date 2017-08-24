@@ -1,0 +1,214 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+ 
+  <modelVersion>4.0.0</modelVersion>
+ 
+  <parent>
+ 
+    <groupId>br.com.web.localize</groupId>
+ 
+    <artifactId>localize-empacotador</artifactId>
+ 
+    <version>1.0.0</version>
+ 
+  </parent>
+ 
+  <artifactId>localize-apresentacao</artifactId>
+ 
+  <packaging>war</packaging>
+
+ 	<repositories>
+	
+		<repository>
+			
+			<id>maven2-repository.java.net</id>
+			
+			<name>Java.net Repository for Maven</name>
+			
+			<url>http://download.java.net/maven/2/</url>
+		
+		</repository>
+		
+		<repository>
+			<id>prime-repo</id>
+			<name>Prime Repo</name>
+			<url>http://repository.primefaces.org</url>
+		</repository>
+	
+	</repositories>
+
+	<dependencies>
+	
+	   <dependency>
+
+        <groupId>commons-fileupload</groupId>
+
+        <artifactId>commons-fileupload</artifactId>
+
+        <version>1.2.1</version>
+
+     </dependency>
+
+     <dependency>
+
+        <groupId>commons-io</groupId>
+
+        <artifactId>commons-io</artifactId>
+
+        <version>1.4</version>
+
+     </dependency>
+	
+
+		<!-- Projeto -->
+		
+		<dependency>
+			<groupId>com.owlike</groupId>
+			<artifactId>genson</artifactId>
+			<version>0.99</version>
+		</dependency>
+
+		<dependency>
+
+			<groupId>br.com.web.localize</groupId>
+
+			<artifactId>localize-service</artifactId>
+
+			<version>1.0.0</version>
+
+		</dependency>
+
+		<!-- Arquitetura -->
+
+
+		<!-- Bibliotecas terceiros -->
+		
+			<dependency>
+			<groupId>org.primefaces</groupId>
+			<artifactId>primefaces</artifactId>
+			<version>5.0</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.primefaces.themes</groupId>
+			<artifactId>glass-x</artifactId>
+			<version>1.0.10</version>
+		</dependency>
+
+		<dependency>
+	
+			<groupId>org.quartz-scheduler</groupId>
+		
+			<artifactId>quartz</artifactId>
+		
+			<version>1.8.6</version>
+	
+		</dependency>
+
+		<dependency>
+
+			<groupId>commons-httpclient</groupId>
+
+			<artifactId>commons-httpclient</artifactId>
+
+			<version>3.1</version>
+
+		</dependency>
+
+
+		<dependency>
+
+			<groupId>javax.servlet</groupId>
+
+			<artifactId>javax.servlet-api</artifactId>
+
+			<version>3.0.1</version>
+
+			<scope>provided</scope>
+
+		</dependency>
+		
+
+		<dependency>
+			
+			<groupId>org.springframework</groupId>
+			
+			<artifactId>spring-web</artifactId>
+			
+			<version>3.0.5.RELEASE</version>
+		
+		</dependency>
+		
+		<dependency>
+
+			<groupId>com.sun.jersey</groupId>
+
+			<artifactId>jersey-server</artifactId>
+
+			<version>1.8</version>
+
+		</dependency>
+		
+	<dependency>
+			<groupId>com.sun.jersey.contribs</groupId>
+			<artifactId>jersey-multipart</artifactId>
+			<version>1.8</version>
+		</dependency>
+		
+		
+			<dependency>
+			<groupId>com.sun.jersey.contribs</groupId>
+			<artifactId>jersey-spring</artifactId>
+			<version>1.8</version>
+			<exclusions>
+				<exclusion>
+					<groupId>org.springframework</groupId>
+					<artifactId>spring</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>org.springframework</groupId>
+					<artifactId>spring-core</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>org.springframework</groupId>
+					<artifactId>spring-web</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>org.springframework</groupId>
+					<artifactId>spring-beans</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>org.springframework</groupId>
+					<artifactId>spring-context</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency> 
+		
+		
+	<dependency>
+			<groupId>com.sun.faces</groupId>
+			<artifactId>jsf-api</artifactId>
+			<version>2.1.7</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.sun.faces</groupId>
+			<artifactId>jsf-impl</artifactId>
+			<version>2.1.7</version>
+		</dependency>
+
+		<dependency>
+
+			<groupId>javax</groupId>
+
+			<artifactId>javaee-api</artifactId>
+
+			<version>6.0</version>
+
+		</dependency>
+
+
+	</dependencies>
+  
+
+
+</project>

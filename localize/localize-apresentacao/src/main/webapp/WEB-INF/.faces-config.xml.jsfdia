@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PROCESS model-entity="JSFProcess">
+ <PROCESS-ITEM NAME="rules:" SHAPE="32,17,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules::0" NAME="item" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT
+    ID="ManterFornecedorController#tipoServico::#paginas#tipoServico.xhtml"
+    NAME="output" PATH="/paginas/tipoServico.xhtml"
+    TARGET="rules:#paginas#tipoServico.xhtml"
+    TITLE="ManterFornecedorController/tipoServico" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules::1" SHAPE="32,129,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules::1" NAME="item" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT
+    ID="ManterFornecedorController#inicial::#paginas#index.xhtml"
+    NAME="output" PATH="/paginas/index.xhtml"
+    TARGET="rules:#paginas#index.xhtml"
+    TITLE="ManterFornecedorController/inicial" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules::2" SHAPE="32,241,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules::2" NAME="item" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT
+    ID="ManterFornecedorController#localizacao::#paginas#localizacao.xhtml"
+    NAME="output" PATH="/paginas/localizacao.xhtml"
+    TARGET="rules:#paginas#localizacao.xhtml"
+    TITLE="ManterFornecedorController/localizacao" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#paginas#localizacao.xhtml"
+  PATH="/paginas/localizacao.xhtml" SHAPE="240,257,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#paginas#index.xhtml"
+  PATH="/paginas/index.xhtml" SHAPE="240,145,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#paginas#tipoServico.xhtml"
+  PATH="/paginas/tipoServico.xhtml" SHAPE="240,33,0,0" model-entity="JSFProcessGroup"/>
+</PROCESS>

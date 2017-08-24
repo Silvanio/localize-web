@@ -1,0 +1,57 @@
+	
+	<form ng-controller="loginController" id="esqueciForm" name="esqueciForm"  >
+	<div id="login-container"   >
+
+		<div id="login-header">
+			<h3>Esqueci a senha</h3>
+
+		</div>
+
+		<div id="login-content" class="clearfix">
+		
+		<alert ng-repeat="alert in alerts" type="{{alert.type}}" close="closeAlert($index)">{{alert.msg}}</alert>
+
+				<fieldset>
+
+					<div class="form-group" validade >
+
+						<label for="username">CNPJ:</label> 
+						
+						<span class="obrigatorio">*</span> 
+						
+						<input class="form-control" required="required"  ui-mask="99.999.999/9999-99" type="text" ng-model="viewModel.cnpj" id="cnpj" name="cnpj" >
+					
+						<p class="help-block" ng-if="esqueciForm.cnpj.$error.required">O Campo CNPJ é Obrigatório</p>
+					
+					</div>
+
+				</fieldset>
+
+				
+				<div class="row">
+				
+						
+					<div class="col-md-6">
+					    <a href="#/" class="form-control btn btn-default btn-large" > 
+							Voltar
+						</a>
+
+					</div>
+						
+						<div class="col-md-6">
+						
+						    <a style="float: right;" ng-click="enviarEmailSenha();" href="#/esquecisenha"  class="form-control btn btn-warning btn-larg" > 
+								Enviar
+							</a>
+
+						</div>
+				
+				</div>
+				
+				<br/>
+
+
+		</div>
+
+	</div>
+	</form>

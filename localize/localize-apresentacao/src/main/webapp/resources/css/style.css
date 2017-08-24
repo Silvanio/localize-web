@@ -1,0 +1,120 @@
+ul,menu,dir {
+	display: block;
+	list-style-type: disc;
+	-webkit-margin-before: 1em;
+	-webkit-margin-after: 1em;
+	-webkit-margin-start: 0px;
+	-webkit-margin-end: 0px;
+	-webkit-padding-start: 0px !important;
+}
+
+.pagination {
+	display: inline-block;
+	padding-left: 0;
+	margin: 5px;
+	border-radius: 4px;
+}
+
+.form-group .help-block {
+	display: none;
+}
+
+.form-group.has-error .help-block {
+	display: block;
+}
+
+.obrigatorio {
+	color: #a94442 !important;
+}
+
+.angular-google-map-container {
+	height: 400px;
+}
+
+#loading-bar .bar {
+	background: #d9534f;
+}
+
+#loading-bar-spinner {
+	margin-left: 50%;
+	margin-top: 150px;
+}
+
+#loading-bar-spinner .spinner-icon {
+	border-top-color: #333;
+	border-left-color: #d9534f;
+	border-bottom-color: #d9534f;
+	width: 30px;
+	height: 30px;
+	border-radius: 50px;
+}
+
+.dropdown-menu>li>a {
+	cursor: pointer !important;
+}
+
+.navFixaTop {
+	margin: 0 auto;
+	width: 100%;
+	position: fixed;
+	z-index: 11;
+}
+
+.ui-autocomplete {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+  float: left;
+  display: none;
+  min-width: 160px;
+  _width: 160px;
+  padding: 4px 0;
+  margin: 2px 0 0 0;
+  list-style: none;
+  background-color: #ffffff;
+  border-color: #ccc;
+  border-color: rgba(0, 0, 0, 0.2);
+  border-style: solid;
+  border-width: 1px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+  *border-right-width: 2px;
+  *border-bottom-width: 2px;
+}
+.ui-autocomplete .ui-menu-item > a.ui-corner-all {
+  display: block;
+  padding: 3px 15px;
+  clear: both;
+  font-weight: normal;
+  line-height: 18px;
+  cursor:pointer;
+  color: #555555;
+  white-space: nowrap;
+}
+.ui-autocomplete .ui-menu-item > a.ui-corner-all.ui-state-hover, .ui-autocomplete .ui-menu-item > a.ui-corner-all.ui-state-active {
+  color: #ffffff;
+  text-decoration: none;
+  background-color: #0088cc;
+  cursor:pointer;
+  border-radius: 0px;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  background-image: none;
+}
+
+#map label { width: auto !important; display:inline !important; }
+#map img { max-width: none !important; }
+
+@media ( max-height :500px) {
+	.navFixaTop {
+		position: absolute;
+	}
+}

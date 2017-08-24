@@ -1,0 +1,19 @@
+
+<form ng-controller="dadosServicoController" id="dadosServicoForm" name="dadosServicoForm"  >
+
+	<div class="row">
+		<div class="col-md-12">
+
+			<alert ng-repeat="alert in alerts" type="{{alert.type}}"
+				close="closeAlert($index)">{{alert.msg}}</alert>
+
+		</div>
+	</div>
+
+	<div ng-if="viewController.listagem" ng-include="'dadosservico/listagem.html'"></div>
+
+	   <div ng-if="!viewController.listagem" ng-include="'dadosservico/adicionar_servico.html'"></div>
+
+</form>
+
+

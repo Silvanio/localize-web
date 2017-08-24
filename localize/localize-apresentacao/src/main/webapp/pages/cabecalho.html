@@ -1,0 +1,33 @@
+<div ng-controller="minhaContaController" >
+<nav class="navbar navbar-inverse navFixaTop" role="navigation" >
+
+	<div class="container" >
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+				<span class="sr-only">Toggle navigation</span>
+				<i class="glyphicon glyphicon-align-justify"></i>
+			</button>
+			<a class="navbar-brand" href="./app.jsp#/"  > 
+			<img alt="Localize" src="../resources/img/Icones-categorias.png" style="width: 25px" height="23px" > 
+				Localize 
+			</a>
+		</div>
+		<div class="collapse navbar-collapse navbar-ex1-collapse"  >
+			<ul class="nav navbar-nav navbar-right">
+				<li class="dropdown">
+					<a href="javscript:;" class="dropdown-toggle" data-toggle="dropdown open"> 
+						<i class="glyphicon glyphicon-user"></i> Minha Conta <b class="caret"></b>
+					</a>
+					
+						<ul class="dropdown-menu">
+						<li><a href="#/trocarsenha" >Trocar Senha</a></li>
+						<li><a href="#">Excluir Conta</a></li>
+						<li><a ng-click="sair();" >Sair</a></li>
+					</ul>
+
+				</li>
+			</ul>
+		</div>
+	</div>
+</nav>
+</div>

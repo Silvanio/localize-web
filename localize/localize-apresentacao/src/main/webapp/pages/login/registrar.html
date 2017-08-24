@@ -1,0 +1,94 @@
+<form ng-controller="registrarController" id="registrarForm" name="registrarForm"  >
+	
+	<div id="login-container" style="margin: 80px auto 0;" >
+
+		<div id="login-header">
+			<h3>Registrar</h3>
+
+		</div>
+
+		<div id="login-content" class="clearfix">
+		
+		<alert ng-repeat="alert in alerts" type="{{alert.type}}" close="closeAlert($index)">{{alert.msg}}</alert>
+
+				<fieldset>
+
+					<div class="form-group" validade >
+		
+						<label for="username">Nome Fantasia:</label> 
+						
+						<span class="obrigatorio">*</span> 
+						
+						<input class="form-control" type="text" ng-model="viewModel.fornecedor.informacoes.nomeFantasia" name="nomefantasia" required="required" id="nomefantasia" placeholder="Nome Fantasia">
+					
+						<p class="help-block" ng-if="registrarForm.nomefantasia.$error.required">O Campo Nome Fantasia é Obrigatório</p>
+						
+					</div>
+
+
+					<div class="form-group" validade >
+
+						<label for="password">CNPJ:</label> 
+						
+						<span class="obrigatorio">*</span> 
+						
+						<input class="form-control" ui-mask="99.999.999/9999-99" name="cnpj"  type="text" ng-model="viewModel.fornecedor.informacoes.cnpj" required="required" id="cnpj" >
+
+						<p class="help-block" ng-if="registrarForm.cnpj.$error.required">O Campo CNPJ é Obrigatório</p>
+
+					</div>
+					
+					
+					<div class="form-group" validade >
+
+						<label for="email">E-mail:</label> 
+						
+						<span class="obrigatorio">*</span> 
+						
+						<input class="form-control" type="email" ng-model="viewModel.fornecedor.informacoes.email" required="required" id="email"  name="email"  placeholder="E-mail">
+					
+						<p class="help-block" ng-if="registrarForm.email.$error.required">O Campo E-mail é Obrigatório</p>
+						
+					</div>
+
+
+					<div class="form-group" validade >
+
+						<label for="password">Senha:</label> 
+						
+						<span class="obrigatorio">*</span> 
+						
+						<input class="form-control" type="password" ng-model="viewModel.fornecedor.informacoes.senha" required="required" id="password" name="password" placeholder="Senha">
+
+						<p class="help-block" ng-if="registrarForm.password.$error.required">O Campo Senha é Obrigatório</p>
+
+					</div>
+
+
+				</fieldset>
+
+				<br>
+
+				<div class="row">
+
+					<div class="col-md-4">&nbsp;</div>
+
+					<div class="col-md-4">
+					    <a href="#/" class="form-control btn btn-default btn-large"> 
+							Voltar
+						</a>
+
+					</div>
+
+					<div class="col-md-4">
+					
+						<input type="button" ng-click="registrar()" value="Registrar" class="form-control btn btn-warning btn-large">
+					
+					</div>
+
+				</div>
+
+		</div>
+
+	</div>
+	</form>

@@ -1,0 +1,96 @@
+<panel titulo="Dados da Serviço" ng-init="iniciar();">
+
+	<div class="row">
+		
+		<div class="col-md-4">
+	   
+	   	<div class="form-group" validade>
+				<label for="cbTipoServico" class="control-label" >Tipo Serviço:</label> 
+				
+				<span class="obrigatorio">*</span> 
+				
+				<select ng-selected ="viewModel.dadosServicoForm.tipoServico" class="form-control" ng-change="listarSeguimentos()" 
+					 required="required" name="cbTipoServico" id="cbTipoServico" ng-model="viewModel.dadosServicoForm.tipoServico"
+					 		ng-options="tipoServico.nome for tipoServico in viewController.tipoServicoList">
+						
+						<option value="" >-- Selecione --</option>
+
+					</select>
+
+				<p class="help-block" ng-if="dadosServicoForm.cbTipoServico.$error.required">O Tipo Serviço é Obrigatório</p>
+
+			</div>
+			
+			</div>
+	   
+	   </div>
+
+			<div class="row">
+		
+				<div class="col-md-12">
+				
+				<table  class="table table-striped table-condensed table-bordered table-hover">
+					<thead >
+						<tr>
+							<th style="text-align: center;">Subcategoria</th>
+							<th style="width: 20%; text-align: center;">Ação</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr ng-repeat="selecionados in viewModel.dadosServicoForm.seguimentosSelecionados">
+							<td style ="text-align: center;">
+								 <select   class="form-control"  
+						 			required="required" name="cbSeguimento" id="cbSeguimento" ng-model="viewModel.dadosServicoForm.seguimentosSelecionados[$index]"
+						 			ng-options="seguimento.descricao for seguimento in viewController.seguimentoList">
+	
+										<option value="">-- Selecione --</option>
+	
+								</select>
+									
+							</td>
+		
+							<td style=" text-align: center;">
+								<button type="button" class="btn btn-primary btn-sm" ng-click="adicionarLinha();">
+					
+									<span class="glyphicon glyphicon-plus"></span>
+						
+								</button>
+		
+								<button type="button" class="btn btn-danger btn-sm" ng-show="!$first" ng-click="removerLinha($index);">
+					
+									<span class="glyphicon glyphicon-trash"></span>
+						
+								</button>
+							</td>
+		
+		
+						</tr>
+					</tbody>
+				</table>
+
+				</div>
+		
+			</div>
+			
+			<div class="row">
+			   
+			   		<div class="col-md-8">&nbsp;</div>
+			   		
+			   		<div class="col-md-2">
+			   		
+			   			<input type="button" ng-click="voltarListagem();" value="Voltar" class="form-control btn btn-default btn-large">
+			   			
+			   		
+			   		</div>
+			   
+			   		<div class="col-md-2">
+			   		
+			   			<input type="button" value="Salvar" ng-click="salvar();" class="form-control btn btn-primary btn-large">
+			   			
+			   		
+			   		</div>
+			   
+			   </div>
+
+
+</panel>

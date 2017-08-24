@@ -1,0 +1,77 @@
+<script>
+function menuController($scope){
+	
+	var element = 'ul.mainnav > li';
+	
+	$(element).click(function() {
+		
+		$(element).removeClass('active');
+
+		$(this).addClass('active');
+		
+		
+	}); 
+	 
+}
+</script>
+<div class="subnavbar" ng-controller="menuController" style="padding-top:50px;" >
+
+	<div class="subnavbar-inner">
+
+		<div class="container">
+
+			<a href="javascript:;" class="subnav-toggle" data-toggle="collapse" data-target=".subnav-collapse"> 
+				<span class="sr-only">Navegação</span> 
+				<i class="glyphicon glyphicon-align-justify"></i>
+			</a>
+
+			<div class="collapse subnav-collapse">
+				<ul class="mainnav">
+
+					<li>
+						<a href="#/informacoes"> 
+							<i class="glyphicon glyphicon-user"></i> 
+							<span>Informações</span>
+						</a>
+					</li>
+					<li>
+						<a href="#/dadosServico"> 
+							<i class="glyphicon glyphicon-list-alt"></i> 
+							<span>Dados de Serviço</span>
+						</a>
+					</li>
+
+					<li>
+						<a href="#/localizacao"> 
+							<i class="glyphicon glyphicon-globe"></i> 
+							<span>Localização</span>
+						</a>
+					</li>
+					
+					<li>
+						<a href="#/promocoes"> 
+							<i class="glyphicon glyphicon-list-alt"></i> 
+							<span>Promoções</span>
+						</a>
+					</li>
+
+					<li>
+						<a href="#/cupons"> 
+							<i class="glyphicon glyphicon-list-alt"></i> 
+							<span>Cupons</span>
+						</a>
+					</li>
+					<li>
+						<a href="#/publicar"> 
+							<i  class="glyphicon glyphicon-phone"></i> 
+							<span>Publicar</span>
+						</a>
+					</li>
+					
+
+				</ul>
+			</div>
+
+		</div>
+	</div>
+</div>

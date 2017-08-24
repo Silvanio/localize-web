@@ -1,0 +1,210 @@
+<panel titulo="Dados da Empresa">
+	
+	
+	<div class="row">
+		
+			<div class="col-md-12">
+		
+				<input type="file" ng-disabled="uploader.queue.length > 0" nv-file-select="" uploader="uploader" /><br />
+		
+			</div>
+		
+			<div class="col-md-12">
+		
+				<table  class="table table-striped table-condensed table-bordered table-hover">
+					<thead ng-show="!viewController.formdisabled  && uploader.queue.length > 0">
+						<tr>
+							<th style="text-align: center;">Imagem</th>
+							<th style="text-align: center;">Progresso</th>
+							<th style="width: 1px; text-align: center;">Ação</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr ng-repeat="item in uploader.queue">
+							<td style ="width: 20%; text-align: center;">
+								<div ng-show="uploader.isHTML5"
+									ng-thumb="{ file: item._file, height: 100 }"></div>
+									
+							</td>
+		
+							<td  ng-show="uploader.isHTML5">
+								<div class="progress" style="margin-bottom: 0;">
+									<div class="progress-bar" role="progressbar"
+										ng-style="{ 'width': item.progress + '%' }"></div>
+								</div>
+							</td>
+		
+							<td nowrap>
+								<button type="button" class="btn btn-danger  btn-sm"  title="Remover" ng-click="removerArquivo();  item.remove()">
+									<span class="glyphicon glyphicon-trash"></span>
+								</button>
+							</td>
+		
+		
+						</tr>
+					</tbody>
+				</table>
+		
+			</div>
+
+			<div class="col-md-12" >
+		
+				<table  class="table table-striped table-condensed table-bordered table-hover" 
+				ng-show="viewModel.informacoes.imagem != null && uploader.queue.length == 0">
+					<thead >
+						<tr>
+							<th style="text-align: center;">Imagem</th>
+							<th style="text-align: center;">Progresso</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr >
+							<td style ="width: 20%; text-align: center;">
+								<img  width="50%" style ="text-align: center;"  ng-src="data:image/JPEG;base64,{{viewModel.informacoes.imagem}}" alt="" />
+							</td>
+		
+							<td  ng-show="uploader.isHTML5">
+								<div class="progress" style="margin-bottom: 0;">
+									<div class="progress-bar" role="progressbar"
+										ng-style="{ 'width': '100%' }"></div>
+								</div>
+							</td>
+		
+						</tr>
+					</tbody>
+				</table>
+		
+			</div>
+		
+		</div>
+		
+	<div class="row">
+			<div class="col-md-2">
+				
+             </div>
+			<div class="col-md-5">&nbsp;</div>
+			<div class="col-md-5">&nbsp;</div>
+	</div>
+
+	<div class="row">
+
+		<div class="col-md-4">
+
+			<div class="form-group" validade>
+
+					<label for="txtCnpj" class="control-label">CNPJ:</label> 
+				
+					<span class="obrigatorio">*</span> 
+					
+					<input class="form-control" ui-mask="99.999.999/9999-99" ng-disabled="true" name="txtCnpj"  ng-model="viewModel.informacoes.cnpj" required="required">
+
+					<p class="help-block" ng-if="informacoesForm.txtCnpj.$error.required">O Campo CNPJ é Obrigatório</p>
+
+			</div>
+
+		</div>
+
+		<div class="col-md-4">
+
+			<div class="form-group" validade>
+
+					<label for="txtFantasia" class="control-label">Nome Fantasia:</label> 
+				
+					<span class="obrigatorio">*</span> 
+					
+					<input class="form-control"  maxlength="250"   ng-disabled="viewController.formdisabled" name="txtFantasia" ng-model="viewModel.informacoes.nomeFantasia"  required="required">
+
+					<p class="help-block" ng-if="informacoesForm.txtFantasia.$error.required">O Campo Nome Fantasia Ã© ObrigatÃ³rio</p>
+
+			</div>
+
+		</div>
+
+		<div class="col-md-4">
+
+			<div class="form-group" validade>
+
+					<label for="txtRazaoSocial" class="control-label">Razão Social:</label> 
+				
+					<input class="form-control"  maxlength="250"   ng-model="viewModel.informacoes.razaoSocial"  ng-disabled="viewController.formdisabled" name="txtRazaoSocial" >
+
+			</div>
+
+		</div>
+
+
+	</div>
+	
+	<div class="row">
+
+		<div class="col-md-4">
+
+			<div class="form-group" >
+
+					<label for="txtEmail" class="control-label">e-mail:</label> 
+				
+					
+					<input class="form-control"  maxlength="250"    ng-disabled="viewController.formdisabled" name="txtEmail"  ng-model="viewModel.informacoes.email" >
+
+			</div>
+
+		</div>
+
+		<div class="col-md-4">
+
+			<div class="form-group" >
+
+					<label for="txtTelefone" class="control-label">Telefone:</label> 
+				
+					
+					<input class="form-control" ui-mask="(999) 99999-999?9"  ng-disabled="viewController.formdisabled" name="txtTelefone"  ng-model="viewModel.informacoes.telefone" >
+
+			</div>
+
+		</div>
+
+		<div class="col-md-4">
+
+			<div class="form-group" >
+
+					<label for="txtTelefone" class="control-label">Celular:</label> 
+				
+					
+					<input class="form-control" ui-mask="(999) 99999-999?9"   ng-disabled="viewController.formdisabled" name="txtCelular"  ng-model="viewModel.informacoes.celular" >
+
+			</div>
+
+		</div>
+	</div>
+	
+		<div class="row">
+		
+			<div class="col-md-12">
+
+			<div class="form-group" >
+
+					<label for="txtTelefone" class="control-label">Descrição:</label> 
+				
+					<input class="form-control"  maxlength="250"  ng-disabled="viewController.formdisabled" name="txtDescricao"  ng-model="viewModel.informacoes.descricao" >
+
+			</div>
+
+		</div>
+		
+		
+		</div>
+	
+		   <div class="row">
+	   
+	   		<div class="col-md-10">&nbsp;</div>
+	   		
+	   		<div class="col-md-2">
+	   		
+	   			<input type="button" ng-click="salvar();" value="Salvar" class="form-control btn btn-primary btn-large">
+	   			
+	   		
+	   		</div>
+	   
+	   </div>
+
+	</panel>

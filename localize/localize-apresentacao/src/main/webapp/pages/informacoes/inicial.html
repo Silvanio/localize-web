@@ -1,0 +1,16 @@
+<form ng-controller="informacoesController" id="informacoesForm" name="informacoesForm" nv-file-drop="" uploader="uploader" ng-init="abrirInformacoes();" >
+
+	<div class="row">
+		<div class="col-md-12">
+
+			<alert ng-repeat="alert in alerts" type="{{alert.type}}"
+				close="closeAlert($index)">{{alert.msg}}</alert>
+
+		</div>
+	</div>
+
+	<div  ng-include="'informacoes/dados_empresa.html'"></div>
+
+</form>
+
+

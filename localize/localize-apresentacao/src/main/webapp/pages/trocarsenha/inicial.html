@@ -1,0 +1,73 @@
+<form ng-controller="trocarSenhaController" id="trocarSenhaForm" name="trocarSenhaForm"  >
+
+	<panel titulo="Trocar Senha">
+<div class="row">
+	<div class="col-md-12">
+
+		<alert ng-repeat="alert in alerts" type="{{alert.type}}" close="closeAlert($index)">{{alert.msg}}</alert>
+
+	</div>	
+	</div>
+		<div class="row">
+		
+		<div class="col-md-4">
+
+			<div class="form-group" validade>
+
+				<label for="txtFantasia" class="control-label">Senha Atual:</label> 
+				<span class="obrigatorio">*</span> 
+				<input type="password" class="form-control"  name="txtSenha" ng-model="viewModel.trocarSenhaDTO.senha" required="required">
+				<p class="help-block"ng-if="trocarSenhaForm.txtSenha.$error.required">O Campo Senha é Obrigatório</p>
+
+			</div>
+
+		</div>
+
+		<div class="col-md-4">
+
+			<div class="form-group" validade>
+
+				<label for="txtFantasia" class="control-label">Nova Senha:</label> 
+				<span class="obrigatorio">*</span> 
+				<input class="form-control" type="password"  name="txtNovaSenha" ng-model="viewModel.trocarSenhaDTO.novaSenha" required="required">
+				<p class="help-block"ng-if="trocarSenhaForm.txtNovaSenha.$error.required">O Campo Nova Senha é Obrigatório</p>
+
+			</div>
+
+		</div>
+
+		<div class="col-md-4">
+
+			<div class="form-group" validade>
+
+				<label for="txtFantasia" class="control-label">Repetir Nova Senha:</label> 
+				<span class="obrigatorio">*</span> 
+				<input class="form-control" type="password"  name="txtRepetirNovaSenha" ng-model="viewModel.trocarSenhaDTO.repetirNovaSenha" required="required">
+				<p class="help-block"ng-if="trocarSenhaForm.txtRepetirNovaSenha.$error.required">O Campo Repetir Nova Senha é Obrigatório</p>
+
+			</div>
+
+		</div>
+
+
+	</div>
+	
+		 <div class="row">
+	   
+	   		<div class="col-md-10">&nbsp;</div>
+	   		
+	   		<div class="col-md-2">
+	   		
+	   			<input type="button" ng-click="salvar();"  value="Salvar" class="form-control btn btn-primary btn-large">
+	   			
+	   		
+	   		</div>
+	   
+	   </div>
+	
+	
+	</panel>
+
+</form>
+
+
